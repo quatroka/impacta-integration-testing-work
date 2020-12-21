@@ -1,0 +1,3445 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 1) - Feature: CRUD Process</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>impacta-integration-testing-work - System Testing Execution Report</td>
+              <td>1</td>
+            <td>20 Dec 2020, 23:07</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Feature Report</h2>
+      </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table class="stats-table">
+
+        
+<thead>
+  <tr class="header dont-sort">
+        <th></th>
+    <th colspan="6">Steps</th>
+    <th colspan="3">Scenarios</th>
+    <th colspan="2">Features</th>
+  </tr>
+  <tr>
+    <th>Feature</th>
+        <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="skipped">Skipped</th>
+    <th class="pending">Pending</th>
+    <th class="undefined">Undefined</th>
+    <th class="total">Total</th>
+
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="total">Total</th>
+
+    <th>Duration</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+
+        <tbody>
+        <tr>
+          <td class="tagname">CRUD Process</td>
+                    <td      class="passed"    >82</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="total">82</td>
+
+          <td  class="passed"    >7</td>
+          <td >0</td>
+          <td class="total">7</td>
+
+          <td class="duration" data-value="6464669670">6.464</td>
+          <td class="passed">Passed</td>
+        </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="feature">
+        
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_run.html">@run</a>
+      </div>
+
+        
+<div class="brief passed">
+  <span class="keyword indention">Feature</span>
+  <span class="name">CRUD Process</span>
+  
+
+  </div>
+
+        <div class="description indention"></div>
+
+        <div class="elements inner-level">
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">0.052</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+    
+<div class="brief passed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-2" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">user wants save a process</span>
+  
+  <span class="lead-duration duration">0.051</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">and the user informs a process data</span>
+  
+  <span class="lead-duration duration">0.001</span>
+
+  </div>
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>vara</td>
+                                  <td>numero_processo</td>
+                                  <td>natureza</td>
+                                  <td>partes</td>
+                                  <td>urgente</td>
+                                  <td>arbitramento</td>
+                                  <td>assistente_social</td>
+                                  <td>data_entrada</td>
+                                  <td>data_saida</td>
+                                  <td>data_agendamento</td>
+                                  <td>status</td>
+                                  <td>Observacao</td>
+                              </tr>
+                          <tr>
+                                  <td>3</td>
+                                  <td>4</td>
+                                  <td>Guarda</td>
+                                  <td>Jose X Maria</td>
+                                  <td>N</td>
+                                  <td>S</td>
+                                  <td>Gisele</td>
+                                  <td>20/10/2020</td>
+                                  <td>20/10/2020</td>
+                                  <td></td>
+                                  <td>Aguardando</td>
+                                  <td></td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">1.781</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-3">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Create Process - POST</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-3" class="collapse collapsable-details ">
+    
+  <div class="inner-level hooks-before">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-4">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="before-4" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+                          <span class="location name">Hooks.beforeScenario(Scenario)</span>
+                        
+  <span class="lead-duration duration">0.000</span>
+
+          </div>
+
+                      
+
+          
+                    
+
+          
+  
+        </div>
+          </div>
+  </div>
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-5">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-5" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">user clicks on save button</span>
+  
+  <span class="lead-duration duration">1.780</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+  <div class="outputs inner-level">
+          <div class="output indention">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-6">
+          Output 1
+          <i class="chevron fa fa-fw"></i>
+        </div>
+        <div id="output-6" class="collapse collapsable-details " >
+          
+          <pre><p>METHOD: [ POST (Request) ]</p><p>Endpoint: [ https://agapito-server.herokuapp.com/processos ]</p><p>Headers: [ Accept=application/json, application/javascript, text/javascript
+Content-Type=application/json; charset=UTF-8 ]</p><p>Body - Request: [ {Observacao=, arbitramento=S, assistente_social=Gisele, data_agendamento=, data_entrada=20/10/2020, data_saida=20/10/2020, natureza=Guarda, numero_processo=4, partes=Jose X Maria, status=Aguardando, urgente=N, vara=3} ]</p><p>------------------------------------</p><p>METHOD: [ POST (Response) ]</p><p>Status Code: [ 201 ]</p><p>Response: [ {&quot;id&quot;:3911,&quot;vara&quot;:&quot;3&quot;,&quot;numero_processo&quot;:&quot;4&quot;,&quot;natureza&quot;:&quot;Guarda&quot;,&quot;partes&quot;:&quot;Jose X Maria&quot;,&quot;urgente&quot;:&quot;N&quot;,&quot;arbitramento&quot;:&quot;S&quot;,&quot;assistente_social&quot;:&quot;Gisele&quot;,&quot;data_entrada&quot;:&quot;2020-10-20&quot;,&quot;data_saida&quot;:&quot;2020-10-20&quot;,&quot;data_agendamento&quot;:null,&quot;status&quot;:&quot;Aguardando&quot;,&quot;observacao&quot;:null,&quot;created_at&quot;:&quot;2020-12-21T02:07:08.249Z&quot;,&quot;updated_at&quot;:&quot;2020-12-21T02:07:08.249Z&quot;,&quot;url&quot;:&quot;https://agapito-server.herokuapp.com/processos/3911.json&quot;} ]</p><p></p></pre>
+        </div>
+      </div>
+      </div>
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">user should see &quot;Salvo com sucesso&quot; message</span>
+  
+  <span class="lead-duration duration">0.001</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+  <div class="inner-level hooks-after">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-7">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="after-7" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+                          <span class="location name">Hooks.afterScenario(Scenario)</span>
+                        
+  <span class="lead-duration duration">0.000</span>
+
+          </div>
+
+                      
+
+          
+                    
+
+          
+  
+        </div>
+          </div>
+  </div>
+
+  </div>
+</div>
+
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">0.000</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-8">
+    
+<div class="brief passed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-8" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-9">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-9" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">user wants save a process</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">and the user informs a process data</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>vara</td>
+                                  <td>numero_processo</td>
+                                  <td>natureza</td>
+                                  <td>partes</td>
+                                  <td>urgente</td>
+                                  <td>arbitramento</td>
+                                  <td>assistente_social</td>
+                                  <td>data_entrada</td>
+                                  <td>data_saida</td>
+                                  <td>data_agendamento</td>
+                                  <td>status</td>
+                                  <td>Observacao</td>
+                              </tr>
+                          <tr>
+                                  <td>3</td>
+                                  <td>4</td>
+                                  <td>Guarda</td>
+                                  <td>Jose X Maria</td>
+                                  <td>N</td>
+                                  <td>S</td>
+                                  <td>Gisele</td>
+                                  <td>20/10/2020</td>
+                                  <td>20/10/2020</td>
+                                  <td></td>
+                                  <td>Aguardando</td>
+                                  <td></td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">0.866</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-10">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Show process detail - GET</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-10" class="collapse collapsable-details ">
+    
+  <div class="inner-level hooks-before">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-11">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="before-11" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+                          <span class="location name">Hooks.beforeScenario(Scenario)</span>
+                        
+  <span class="lead-duration duration">0.000</span>
+
+          </div>
+
+                      
+
+          
+                    
+
+          
+  
+        </div>
+          </div>
+  </div>
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-12">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-12" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">user wants see a process with ID</span>
+  
+  <span class="lead-duration duration">0.157</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">user clicks on see button</span>
+  
+  <span class="lead-duration duration">0.709</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+  <div class="outputs inner-level">
+          <div class="output indention">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-13">
+          Output 1
+          <i class="chevron fa fa-fw"></i>
+        </div>
+        <div id="output-13" class="collapse collapsable-details " >
+          
+          <pre><p>METHOD: [ GET (Request) ]</p><p>Endpoint: [ https://agapito-server.herokuapp.com/processos/3911.json ]</p><p>Headers: [ Accept=application/json, application/javascript, text/javascript
+Content-Type=application/json; charset=UTF-8 ]</p><p>Body - Request: [  ]</p><p>------------------------------------</p><p>METHOD: [ GET (Response) ]</p><p>Status Code: [ 200 ]</p><p>Response: [ {&quot;id&quot;:3911,&quot;vara&quot;:&quot;3&quot;,&quot;numero_processo&quot;:&quot;4&quot;,&quot;natureza&quot;:&quot;Guarda&quot;,&quot;partes&quot;:&quot;Jose X Maria&quot;,&quot;urgente&quot;:&quot;N&quot;,&quot;arbitramento&quot;:&quot;S&quot;,&quot;assistente_social&quot;:&quot;Gisele&quot;,&quot;data_entrada&quot;:&quot;2020-10-20&quot;,&quot;data_saida&quot;:&quot;2020-10-20&quot;,&quot;data_agendamento&quot;:null,&quot;status&quot;:&quot;Aguardando&quot;,&quot;observacao&quot;:null,&quot;created_at&quot;:&quot;2020-12-21T02:07:08.249Z&quot;,&quot;updated_at&quot;:&quot;2020-12-21T02:07:08.249Z&quot;,&quot;url&quot;:&quot;https://agapito-server.herokuapp.com/processos/3911.json&quot;} ]</p><p></p></pre>
+        </div>
+      </div>
+      </div>
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">user should see &quot;Consulta realizada com sucesso&quot; message</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+  <div class="inner-level hooks-after">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-14">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="after-14" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+                          <span class="location name">Hooks.afterScenario(Scenario)</span>
+                        
+  <span class="lead-duration duration">0.000</span>
+
+          </div>
+
+                      
+
+          
+                    
+
+          
+  
+        </div>
+          </div>
+  </div>
+
+  </div>
+</div>
+
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">0.000</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-15">
+    
+<div class="brief passed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-15" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-16">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-16" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">user wants save a process</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">and the user informs a process data</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>vara</td>
+                                  <td>numero_processo</td>
+                                  <td>natureza</td>
+                                  <td>partes</td>
+                                  <td>urgente</td>
+                                  <td>arbitramento</td>
+                                  <td>assistente_social</td>
+                                  <td>data_entrada</td>
+                                  <td>data_saida</td>
+                                  <td>data_agendamento</td>
+                                  <td>status</td>
+                                  <td>Observacao</td>
+                              </tr>
+                          <tr>
+                                  <td>3</td>
+                                  <td>4</td>
+                                  <td>Guarda</td>
+                                  <td>Jose X Maria</td>
+                                  <td>N</td>
+                                  <td>S</td>
+                                  <td>Gisele</td>
+                                  <td>20/10/2020</td>
+                                  <td>20/10/2020</td>
+                                  <td></td>
+                                  <td>Aguardando</td>
+                                  <td></td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_run.html">@run</a>
+      </div>
+
+  
+  <span class="lead-duration duration">0.766</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-17">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Edit process info - PUT</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-17" class="collapse collapsable-details ">
+    
+  <div class="inner-level hooks-before">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-18">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="before-18" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+                          <span class="location name">Hooks.beforeScenario(Scenario)</span>
+                        
+  <span class="lead-duration duration">0.000</span>
+
+          </div>
+
+                      
+
+          
+                    
+
+          
+  
+        </div>
+          </div>
+  </div>
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-19">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-19" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">user wants edit a process</span>
+  
+  <span class="lead-duration duration">0.018</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;vara&quot; equals to &quot;10&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;numero_processo&quot; equals to &quot;422&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;natureza&quot; equals to &quot;Guarda2&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;partes&quot; equals to &quot;&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;urgente&quot; equals to &quot;S&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;arbitramento&quot; equals to &quot;N&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;assistente_social&quot; equals to &quot;Gisele da Silva&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;data_entrada&quot; equals to &quot;20/10/2022&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;data_saida&quot; equals to &quot;20/10/2021&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;data_agendamento&quot; equals to &quot;&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;status&quot; equals to &quot;Aguardando&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;observacao&quot; equals to &quot;&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">user clicks on edit button</span>
+  
+  <span class="lead-duration duration">0.747</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+  <div class="outputs inner-level">
+          <div class="output indention">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-20">
+          Output 1
+          <i class="chevron fa fa-fw"></i>
+        </div>
+        <div id="output-20" class="collapse collapsable-details " >
+          
+          <pre><p>METHOD: [ PUT (Request) ]</p><p>Endpoint: [ https://agapito-server.herokuapp.com/processos/3911.json ]</p><p>Headers: [ Accept=application/json, application/javascript, text/javascript
+Content-Type=application/json; charset=UTF-8 ]</p><p>Body - Request: [ {Observacao=, arbitramento=N, assistente_social=Gisele da Silva, data_agendamento=, data_entrada=20/10/2022, data_saida=20/10/2021, natureza=Guarda2, numero_processo=422, observacao=, partes=, status=Aguardando, urgente=S, vara=10} ]</p><p>------------------------------------</p><p>METHOD: [ PUT (Response) ]</p><p>Status Code: [ 422 ]</p><p>Response: [ {&quot;partes&quot;:[&quot;n&atilde;o pode ser deixado em branco&quot;]} ]</p><p></p></pre>
+        </div>
+      </div>
+      </div>
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">user should see &quot;Erro ao editar processo&quot; message</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+  <div class="inner-level hooks-after">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-21">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="after-21" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+                          <span class="location name">Hooks.afterScenario(Scenario)</span>
+                        
+  <span class="lead-duration duration">0.000</span>
+
+          </div>
+
+                      
+
+          
+                    
+
+          
+  
+        </div>
+          </div>
+  </div>
+
+  </div>
+</div>
+
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">0.000</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-22">
+    
+<div class="brief passed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-22" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-23">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-23" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">user wants save a process</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">and the user informs a process data</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>vara</td>
+                                  <td>numero_processo</td>
+                                  <td>natureza</td>
+                                  <td>partes</td>
+                                  <td>urgente</td>
+                                  <td>arbitramento</td>
+                                  <td>assistente_social</td>
+                                  <td>data_entrada</td>
+                                  <td>data_saida</td>
+                                  <td>data_agendamento</td>
+                                  <td>status</td>
+                                  <td>Observacao</td>
+                              </tr>
+                          <tr>
+                                  <td>3</td>
+                                  <td>4</td>
+                                  <td>Guarda</td>
+                                  <td>Jose X Maria</td>
+                                  <td>N</td>
+                                  <td>S</td>
+                                  <td>Gisele</td>
+                                  <td>20/10/2020</td>
+                                  <td>20/10/2020</td>
+                                  <td></td>
+                                  <td>Aguardando</td>
+                                  <td></td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_run.html">@run</a>
+      </div>
+
+  
+  <span class="lead-duration duration">0.779</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-24">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Edit process info - PUT</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-24" class="collapse collapsable-details ">
+    
+  <div class="inner-level hooks-before">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-25">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="before-25" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+                          <span class="location name">Hooks.beforeScenario(Scenario)</span>
+                        
+  <span class="lead-duration duration">0.000</span>
+
+          </div>
+
+                      
+
+          
+                    
+
+          
+  
+        </div>
+          </div>
+  </div>
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-26">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-26" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">user wants edit a process</span>
+  
+  <span class="lead-duration duration">0.011</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;vara&quot; equals to &quot;10&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;numero_processo&quot; equals to &quot;422&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;natureza&quot; equals to &quot;Guarda2&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;partes&quot; equals to &quot;JOao X Maria&quot;</span>
+  
+  <span class="lead-duration duration">0.001</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;urgente&quot; equals to &quot;S&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;arbitramento&quot; equals to &quot;N&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;assistente_social&quot; equals to &quot;Gisele da Silva&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;data_entrada&quot; equals to &quot;20/10/2022&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;data_saida&quot; equals to &quot;20/10/2021&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;data_agendamento&quot; equals to &quot;&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;status&quot; equals to &quot;Aguardando&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;observacao&quot; equals to &quot;Vai ser incrivel&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">user clicks on edit button</span>
+  
+  <span class="lead-duration duration">0.764</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+  <div class="outputs inner-level">
+          <div class="output indention">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-27">
+          Output 1
+          <i class="chevron fa fa-fw"></i>
+        </div>
+        <div id="output-27" class="collapse collapsable-details " >
+          
+          <pre><p>METHOD: [ PUT (Request) ]</p><p>Endpoint: [ https://agapito-server.herokuapp.com/processos/3911.json ]</p><p>Headers: [ Accept=application/json, application/javascript, text/javascript
+Content-Type=application/json; charset=UTF-8 ]</p><p>Body - Request: [ {Observacao=, arbitramento=N, assistente_social=Gisele da Silva, data_agendamento=, data_entrada=20/10/2022, data_saida=20/10/2021, natureza=Guarda2, numero_processo=422, observacao=Vai ser incrivel, partes=JOao X Maria, status=Aguardando, urgente=S, vara=10} ]</p><p>------------------------------------</p><p>METHOD: [ PUT (Response) ]</p><p>Status Code: [ 200 ]</p><p>Response: [ {&quot;id&quot;:3911,&quot;vara&quot;:&quot;10&quot;,&quot;numero_processo&quot;:&quot;422&quot;,&quot;natureza&quot;:&quot;Guarda2&quot;,&quot;partes&quot;:&quot;JOao X Maria&quot;,&quot;urgente&quot;:&quot;S&quot;,&quot;arbitramento&quot;:&quot;N&quot;,&quot;assistente_social&quot;:&quot;Gisele da Silva&quot;,&quot;data_entrada&quot;:&quot;2022-10-20&quot;,&quot;data_saida&quot;:&quot;2021-10-20&quot;,&quot;data_agendamento&quot;:null,&quot;status&quot;:&quot;Aguardando&quot;,&quot;observacao&quot;:&quot;Vai ser incrivel&quot;,&quot;created_at&quot;:&quot;2020-12-21T02:07:08.249Z&quot;,&quot;updated_at&quot;:&quot;2020-12-21T02:07:10.748Z&quot;,&quot;url&quot;:&quot;https://agapito-server.herokuapp.com/processos/3911.json&quot;} ]</p><p></p></pre>
+        </div>
+      </div>
+      </div>
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">user should see &quot;Processo editado com sucesso&quot; message</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+  <div class="inner-level hooks-after">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-28">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="after-28" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+                          <span class="location name">Hooks.afterScenario(Scenario)</span>
+                        
+  <span class="lead-duration duration">0.000</span>
+
+          </div>
+
+                      
+
+          
+                    
+
+          
+  
+        </div>
+          </div>
+  </div>
+
+  </div>
+</div>
+
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">0.000</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-29">
+    
+<div class="brief passed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-29" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-30">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-30" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">user wants save a process</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">and the user informs a process data</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>vara</td>
+                                  <td>numero_processo</td>
+                                  <td>natureza</td>
+                                  <td>partes</td>
+                                  <td>urgente</td>
+                                  <td>arbitramento</td>
+                                  <td>assistente_social</td>
+                                  <td>data_entrada</td>
+                                  <td>data_saida</td>
+                                  <td>data_agendamento</td>
+                                  <td>status</td>
+                                  <td>Observacao</td>
+                              </tr>
+                          <tr>
+                                  <td>3</td>
+                                  <td>4</td>
+                                  <td>Guarda</td>
+                                  <td>Jose X Maria</td>
+                                  <td>N</td>
+                                  <td>S</td>
+                                  <td>Gisele</td>
+                                  <td>20/10/2020</td>
+                                  <td>20/10/2020</td>
+                                  <td></td>
+                                  <td>Aguardando</td>
+                                  <td></td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_run.html">@run</a>
+      </div>
+
+  
+  <span class="lead-duration duration">0.747</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-31">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Edit process info - PUT</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-31" class="collapse collapsable-details ">
+    
+  <div class="inner-level hooks-before">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-32">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="before-32" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+                          <span class="location name">Hooks.beforeScenario(Scenario)</span>
+                        
+  <span class="lead-duration duration">0.000</span>
+
+          </div>
+
+                      
+
+          
+                    
+
+          
+  
+        </div>
+          </div>
+  </div>
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-33">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-33" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">user wants edit a process</span>
+  
+  <span class="lead-duration duration">0.021</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;vara&quot; equals to &quot;10&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;numero_processo&quot; equals to &quot;422&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;natureza&quot; equals to &quot;Guarda2&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;partes&quot; equals to &quot;Fulatinha&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;urgente&quot; equals to &quot;S&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;arbitramento&quot; equals to &quot;&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;assistente_social&quot; equals to &quot;Gisele da Silva&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;data_entrada&quot; equals to &quot;20/10/2022&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;data_saida&quot; equals to &quot;20/10/2021&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;data_agendamento&quot; equals to &quot;&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;status&quot; equals to &quot;Aguardando&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;observacao&quot; equals to &quot;&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">user clicks on edit button</span>
+  
+  <span class="lead-duration duration">0.725</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+  <div class="outputs inner-level">
+          <div class="output indention">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-34">
+          Output 1
+          <i class="chevron fa fa-fw"></i>
+        </div>
+        <div id="output-34" class="collapse collapsable-details " >
+          
+          <pre><p>METHOD: [ PUT (Request) ]</p><p>Endpoint: [ https://agapito-server.herokuapp.com/processos/3911.json ]</p><p>Headers: [ Accept=application/json, application/javascript, text/javascript
+Content-Type=application/json; charset=UTF-8 ]</p><p>Body - Request: [ {Observacao=, arbitramento=, assistente_social=Gisele da Silva, data_agendamento=, data_entrada=20/10/2022, data_saida=20/10/2021, natureza=Guarda2, numero_processo=422, observacao=, partes=Fulatinha, status=Aguardando, urgente=S, vara=10} ]</p><p>------------------------------------</p><p>METHOD: [ PUT (Response) ]</p><p>Status Code: [ 422 ]</p><p>Response: [ {&quot;arbitramento&quot;:[&quot;n&atilde;o pode ser deixado em branco&quot;,&quot;Somente permitido com as op&ccedil;&otilde;es [S]im ou [N]&atilde;o.&quot;]} ]</p><p></p></pre>
+        </div>
+      </div>
+      </div>
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">user should see &quot;Erro ao editar processo&quot; message</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+  <div class="inner-level hooks-after">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-35">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="after-35" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+                          <span class="location name">Hooks.afterScenario(Scenario)</span>
+                        
+  <span class="lead-duration duration">0.000</span>
+
+          </div>
+
+                      
+
+          
+                    
+
+          
+  
+        </div>
+          </div>
+  </div>
+
+  </div>
+</div>
+
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">0.000</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-36">
+    
+<div class="brief passed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-36" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-37">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-37" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">user wants save a process</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">and the user informs a process data</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>vara</td>
+                                  <td>numero_processo</td>
+                                  <td>natureza</td>
+                                  <td>partes</td>
+                                  <td>urgente</td>
+                                  <td>arbitramento</td>
+                                  <td>assistente_social</td>
+                                  <td>data_entrada</td>
+                                  <td>data_saida</td>
+                                  <td>data_agendamento</td>
+                                  <td>status</td>
+                                  <td>Observacao</td>
+                              </tr>
+                          <tr>
+                                  <td>3</td>
+                                  <td>4</td>
+                                  <td>Guarda</td>
+                                  <td>Jose X Maria</td>
+                                  <td>N</td>
+                                  <td>S</td>
+                                  <td>Gisele</td>
+                                  <td>20/10/2020</td>
+                                  <td>20/10/2020</td>
+                                  <td></td>
+                                  <td>Aguardando</td>
+                                  <td></td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_run.html">@run</a>
+      </div>
+
+  
+  <span class="lead-duration duration">0.767</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-38">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Edit process info - PUT</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-38" class="collapse collapsable-details ">
+    
+  <div class="inner-level hooks-before">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-39">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="before-39" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+                          <span class="location name">Hooks.beforeScenario(Scenario)</span>
+                        
+  <span class="lead-duration duration">0.000</span>
+
+          </div>
+
+                      
+
+          
+                    
+
+          
+  
+        </div>
+          </div>
+  </div>
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-40">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-40" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">user wants edit a process</span>
+  
+  <span class="lead-duration duration">0.005</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;vara&quot; equals to &quot;1&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;numero_processo&quot; equals to &quot;1&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;natureza&quot; equals to &quot;Auditoria&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;partes&quot; equals to &quot;Empresa X Empresa&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;urgente&quot; equals to &quot;N&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;arbitramento&quot; equals to &quot;N&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;assistente_social&quot; equals to &quot;Clayton das couves&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;data_entrada&quot; equals to &quot;01/02/2018&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;data_saida&quot; equals to &quot;&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;data_agendamento&quot; equals to &quot;01/02/2023&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;status&quot; equals to &quot;Em Analise&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user informs &quot;observacao&quot; equals to &quot;&quot;</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">user clicks on edit button</span>
+  
+  <span class="lead-duration duration">0.760</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+  <div class="outputs inner-level">
+          <div class="output indention">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-41">
+          Output 1
+          <i class="chevron fa fa-fw"></i>
+        </div>
+        <div id="output-41" class="collapse collapsable-details " >
+          
+          <pre><p>METHOD: [ PUT (Request) ]</p><p>Endpoint: [ https://agapito-server.herokuapp.com/processos/3911.json ]</p><p>Headers: [ Accept=application/json, application/javascript, text/javascript
+Content-Type=application/json; charset=UTF-8 ]</p><p>Body - Request: [ {Observacao=, arbitramento=N, assistente_social=Clayton das couves, data_agendamento=01/02/2023, data_entrada=01/02/2018, data_saida=, natureza=Auditoria, numero_processo=1, observacao=, partes=Empresa X Empresa, status=Em Analise, urgente=N, vara=1} ]</p><p>------------------------------------</p><p>METHOD: [ PUT (Response) ]</p><p>Status Code: [ 200 ]</p><p>Response: [ {&quot;id&quot;:3911,&quot;vara&quot;:&quot;1&quot;,&quot;numero_processo&quot;:&quot;1&quot;,&quot;natureza&quot;:&quot;Auditoria&quot;,&quot;partes&quot;:&quot;Empresa X Empresa&quot;,&quot;urgente&quot;:&quot;N&quot;,&quot;arbitramento&quot;:&quot;N&quot;,&quot;assistente_social&quot;:&quot;Clayton das couves&quot;,&quot;data_entrada&quot;:&quot;2018-02-01&quot;,&quot;data_saida&quot;:null,&quot;data_agendamento&quot;:&quot;2023-02-01&quot;,&quot;status&quot;:&quot;Em Analise&quot;,&quot;observacao&quot;:&quot;&quot;,&quot;created_at&quot;:&quot;2020-12-21T02:07:08.249Z&quot;,&quot;updated_at&quot;:&quot;2020-12-21T02:07:12.271Z&quot;,&quot;url&quot;:&quot;https://agapito-server.herokuapp.com/processos/3911.json&quot;} ]</p><p></p></pre>
+        </div>
+      </div>
+      </div>
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">user should see &quot;Processo editado com sucesso&quot; message</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+  <div class="inner-level hooks-after">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-42">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="after-42" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+                          <span class="location name">Hooks.afterScenario(Scenario)</span>
+                        
+  <span class="lead-duration duration">0.000</span>
+
+          </div>
+
+                      
+
+          
+                    
+
+          
+  
+        </div>
+          </div>
+  </div>
+
+  </div>
+</div>
+
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">0.000</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-43">
+    
+<div class="brief passed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-43" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-44">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-44" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">user wants save a process</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">and the user informs a process data</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>vara</td>
+                                  <td>numero_processo</td>
+                                  <td>natureza</td>
+                                  <td>partes</td>
+                                  <td>urgente</td>
+                                  <td>arbitramento</td>
+                                  <td>assistente_social</td>
+                                  <td>data_entrada</td>
+                                  <td>data_saida</td>
+                                  <td>data_agendamento</td>
+                                  <td>status</td>
+                                  <td>Observacao</td>
+                              </tr>
+                          <tr>
+                                  <td>3</td>
+                                  <td>4</td>
+                                  <td>Guarda</td>
+                                  <td>Jose X Maria</td>
+                                  <td>N</td>
+                                  <td>S</td>
+                                  <td>Gisele</td>
+                                  <td>20/10/2020</td>
+                                  <td>20/10/2020</td>
+                                  <td></td>
+                                  <td>Aguardando</td>
+                                  <td></td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">0.702</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-45">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Delete process - DELETE</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-45" class="collapse collapsable-details ">
+    
+  <div class="inner-level hooks-before">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-46">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="before-46" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+                          <span class="location name">Hooks.beforeScenario(Scenario)</span>
+                        
+  <span class="lead-duration duration">0.000</span>
+
+          </div>
+
+                      
+
+          
+                    
+
+          
+  
+        </div>
+          </div>
+  </div>
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-47">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-47" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">user wants delete a process with ID</span>
+  
+  <span class="lead-duration duration">0.008</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">user clicks on delete button</span>
+  
+  <span class="lead-duration duration">0.694</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+  <div class="outputs inner-level">
+          <div class="output indention">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#output-48">
+          Output 1
+          <i class="chevron fa fa-fw"></i>
+        </div>
+        <div id="output-48" class="collapse collapsable-details " >
+          
+          <pre><p>METHOD: [ DELETE (Request) ]</p><p>Endpoint: [ https://agapito-server.herokuapp.com/processos/3911.json ]</p><p>Headers: [ Accept=application/json, application/javascript, text/javascript
+Content-Type=application/json; charset=UTF-8 ]</p><p>Body - Request: [  ]</p><p>------------------------------------</p><p>METHOD: [ DELETE (Response) ]</p><p>Status Code: [ 204 ]</p><p>Response: [  ]</p><p></p></pre>
+        </div>
+      </div>
+      </div>
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">user should see &quot;Deletado com sucesso&quot; message</span>
+  
+  <span class="lead-duration duration">0.000</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+  <div class="inner-level hooks-after">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-49">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="after-49" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+                          <span class="location name">Hooks.afterScenario(Scenario)</span>
+                        
+  <span class="lead-duration duration">0.000</span>
+
+          </div>
+
+                      
+
+          
+                    
+
+          
+  
+        </div>
+          </div>
+  </div>
+
+  </div>
+</div>
+
+                  </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

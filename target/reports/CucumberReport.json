@@ -1,0 +1,2320 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 51319518,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user wants save a process",
+            "match": {
+              "location": "CrudProcessSteps.userWantsSaveAProcess()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1416874,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "and the user informs a process data",
+            "match": {
+              "location": "CrudProcessSteps.andTheUserInformsAProcessData(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "vara",
+                  "numero_processo",
+                  "natureza",
+                  "partes",
+                  "urgente",
+                  "arbitramento",
+                  "assistente_social",
+                  "data_entrada",
+                  "data_saida",
+                  "data_agendamento",
+                  "status",
+                  "Observacao"
+                ],
+                "line": 7
+              },
+              {
+                "cells": [
+                  "3",
+                  "4",
+                  "Guarda",
+                  "Jose X Maria",
+                  "N",
+                  "S",
+                  "Gisele",
+                  "20/10/2020",
+                  "20/10/2020",
+                  "",
+                  "Aguardando",
+                  ""
+                ],
+                "line": 8
+              }
+            ],
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 71714,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario(Scenario)"
+            }
+          }
+        ],
+        "line": 10,
+        "name": "Create Process - POST",
+        "description": "",
+        "id": "crud-process;create-process---post",
+        "after": [
+          {
+            "result": {
+              "duration": 8246,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "output": [
+              "METHOD: [ POST (Request) ]",
+              "Endpoint: [ https://agapito-server.herokuapp.com/processos ]",
+              "Headers: [ Accept\u003dapplication/json, application/javascript, text/javascript\nContent-Type\u003dapplication/json; charset\u003dUTF-8 ]",
+              "Body - Request: [ {Observacao\u003d, arbitramento\u003dS, assistente_social\u003dGisele, data_agendamento\u003d, data_entrada\u003d20/10/2020, data_saida\u003d20/10/2020, natureza\u003dGuarda, numero_processo\u003d4, partes\u003dJose X Maria, status\u003dAguardando, urgente\u003dN, vara\u003d3} ]",
+              "------------------------------------",
+              "METHOD: [ POST (Response) ]",
+              "Status Code: [ 201 ]",
+              "Response: [ {\"id\":3911,\"vara\":\"3\",\"numero_processo\":\"4\",\"natureza\":\"Guarda\",\"partes\":\"Jose X Maria\",\"urgente\":\"N\",\"arbitramento\":\"S\",\"assistente_social\":\"Gisele\",\"data_entrada\":\"2020-10-20\",\"data_saida\":\"2020-10-20\",\"data_agendamento\":null,\"status\":\"Aguardando\",\"observacao\":null,\"created_at\":\"2020-12-21T02:07:08.249Z\",\"updated_at\":\"2020-12-21T02:07:08.249Z\",\"url\":\"https://agapito-server.herokuapp.com/processos/3911.json\"} ]",
+              ""
+            ],
+            "result": {
+              "duration": 1780116881,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user clicks on save button",
+            "match": {
+              "location": "CrudProcessSteps.userClicksOnSaveButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1170663,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user should see \"Salvo com sucesso\" message",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Salvo com sucesso",
+                  "offset": 17
+                }
+              ],
+              "location": "CrudProcessSteps.userShouldSeeMessage(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 15148,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user wants save a process",
+            "match": {
+              "location": "CrudProcessSteps.userWantsSaveAProcess()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 64758,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "and the user informs a process data",
+            "match": {
+              "location": "CrudProcessSteps.andTheUserInformsAProcessData(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "vara",
+                  "numero_processo",
+                  "natureza",
+                  "partes",
+                  "urgente",
+                  "arbitramento",
+                  "assistente_social",
+                  "data_entrada",
+                  "data_saida",
+                  "data_agendamento",
+                  "status",
+                  "Observacao"
+                ],
+                "line": 7
+              },
+              {
+                "cells": [
+                  "3",
+                  "4",
+                  "Guarda",
+                  "Jose X Maria",
+                  "N",
+                  "S",
+                  "Gisele",
+                  "20/10/2020",
+                  "20/10/2020",
+                  "",
+                  "Aguardando",
+                  ""
+                ],
+                "line": 8
+              }
+            ],
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 11374,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario(Scenario)"
+            }
+          }
+        ],
+        "line": 15,
+        "name": "Show process detail - GET",
+        "description": "",
+        "id": "crud-process;show-process-detail---get",
+        "after": [
+          {
+            "result": {
+              "duration": 15239,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 157101338,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "user wants see a process with ID",
+            "match": {
+              "location": "CrudProcessSteps.userWantsSeeAProcessWithID()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "output": [
+              "METHOD: [ GET (Request) ]",
+              "Endpoint: [ https://agapito-server.herokuapp.com/processos/3911.json ]",
+              "Headers: [ Accept\u003dapplication/json, application/javascript, text/javascript\nContent-Type\u003dapplication/json; charset\u003dUTF-8 ]",
+              "Body - Request: [  ]",
+              "------------------------------------",
+              "METHOD: [ GET (Response) ]",
+              "Status Code: [ 200 ]",
+              "Response: [ {\"id\":3911,\"vara\":\"3\",\"numero_processo\":\"4\",\"natureza\":\"Guarda\",\"partes\":\"Jose X Maria\",\"urgente\":\"N\",\"arbitramento\":\"S\",\"assistente_social\":\"Gisele\",\"data_entrada\":\"2020-10-20\",\"data_saida\":\"2020-10-20\",\"data_agendamento\":null,\"status\":\"Aguardando\",\"observacao\":null,\"created_at\":\"2020-12-21T02:07:08.249Z\",\"updated_at\":\"2020-12-21T02:07:08.249Z\",\"url\":\"https://agapito-server.herokuapp.com/processos/3911.json\"} ]",
+              ""
+            ],
+            "result": {
+              "duration": 709466058,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "user clicks on see button",
+            "match": {
+              "location": "CrudProcessSteps.userClicksOnSeeButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 168258,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user should see \"Consulta realizada com sucesso\" message",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Consulta realizada com sucesso",
+                  "offset": 17
+                }
+              ],
+              "location": "CrudProcessSteps.userShouldSeeMessage(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 52494,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user wants save a process",
+            "match": {
+              "location": "CrudProcessSteps.userWantsSaveAProcess()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 138416,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "and the user informs a process data",
+            "match": {
+              "location": "CrudProcessSteps.andTheUserInformsAProcessData(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "vara",
+                  "numero_processo",
+                  "natureza",
+                  "partes",
+                  "urgente",
+                  "arbitramento",
+                  "assistente_social",
+                  "data_entrada",
+                  "data_saida",
+                  "data_agendamento",
+                  "status",
+                  "Observacao"
+                ],
+                "line": 7
+              },
+              {
+                "cells": [
+                  "3",
+                  "4",
+                  "Guarda",
+                  "Jose X Maria",
+                  "N",
+                  "S",
+                  "Gisele",
+                  "20/10/2020",
+                  "20/10/2020",
+                  "",
+                  "Aguardando",
+                  ""
+                ],
+                "line": 8
+              }
+            ],
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 32327,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario(Scenario)"
+            }
+          }
+        ],
+        "line": 38,
+        "name": "Edit process info - PUT",
+        "description": "",
+        "id": "crud-process;edit-process-info---put;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 13872,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 18310362,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "user wants edit a process",
+            "match": {
+              "location": "CrudProcessSteps.userWantsEditAProcessWithID()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 52811,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "user informs \"vara\" equals to \"10\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "vara",
+                  "offset": 14
+                },
+                {
+                  "val": "10",
+                  "offset": 31
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 36359,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "user informs \"numero_processo\" equals to \"422\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "numero_processo",
+                  "offset": 14
+                },
+                {
+                  "val": "422",
+                  "offset": 42
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 31869,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "user informs \"natureza\" equals to \"Guarda2\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "natureza",
+                  "offset": 14
+                },
+                {
+                  "val": "Guarda2",
+                  "offset": 35
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 32816,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "user informs \"partes\" equals to \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "partes",
+                  "offset": 14
+                },
+                {
+                  "val": "",
+                  "offset": 33
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 34433,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "user informs \"urgente\" equals to \"S\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "urgente",
+                  "offset": 14
+                },
+                {
+                  "val": "S",
+                  "offset": 34
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              4
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 29498,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "user informs \"arbitramento\" equals to \"N\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arbitramento",
+                  "offset": 14
+                },
+                {
+                  "val": "N",
+                  "offset": 39
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              5
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 30836,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "user informs \"assistente_social\" equals to \"Gisele da Silva\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "assistente_social",
+                  "offset": 14
+                },
+                {
+                  "val": "Gisele da Silva",
+                  "offset": 44
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              6
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 31043,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "user informs \"data_entrada\" equals to \"20/10/2022\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "data_entrada",
+                  "offset": 14
+                },
+                {
+                  "val": "20/10/2022",
+                  "offset": 39
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              7
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 71082,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "user informs \"data_saida\" equals to \"20/10/2021\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "data_saida",
+                  "offset": 14
+                },
+                {
+                  "val": "20/10/2021",
+                  "offset": 37
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              8
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 43099,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "user informs \"data_agendamento\" equals to \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "data_agendamento",
+                  "offset": 14
+                },
+                {
+                  "val": "",
+                  "offset": 43
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              9
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 51034,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "user informs \"status\" equals to \"Aguardando\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "status",
+                  "offset": 14
+                },
+                {
+                  "val": "Aguardando",
+                  "offset": 33
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              10
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 34308,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "user informs \"observacao\" equals to \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "observacao",
+                  "offset": 14
+                },
+                {
+                  "val": "",
+                  "offset": 37
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              11
+            ],
+            "keyword": "And "
+          },
+          {
+            "output": [
+              "METHOD: [ PUT (Request) ]",
+              "Endpoint: [ https://agapito-server.herokuapp.com/processos/3911.json ]",
+              "Headers: [ Accept\u003dapplication/json, application/javascript, text/javascript\nContent-Type\u003dapplication/json; charset\u003dUTF-8 ]",
+              "Body - Request: [ {Observacao\u003d, arbitramento\u003dN, assistente_social\u003dGisele da Silva, data_agendamento\u003d, data_entrada\u003d20/10/2022, data_saida\u003d20/10/2021, natureza\u003dGuarda2, numero_processo\u003d422, observacao\u003d, partes\u003d, status\u003dAguardando, urgente\u003dS, vara\u003d10} ]",
+              "------------------------------------",
+              "METHOD: [ PUT (Response) ]",
+              "Status Code: [ 422 ]",
+              "Response: [ {\"partes\":[\"não pode ser deixado em branco\"]} ]",
+              ""
+            ],
+            "result": {
+              "duration": 747197299,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "user clicks on edit button",
+            "match": {
+              "location": "CrudProcessSteps.userClicksOnEditButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 118486,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "user should see \"Erro ao editar processo\" message",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Erro ao editar processo",
+                  "offset": 17
+                }
+              ],
+              "location": "CrudProcessSteps.userShouldSeeMessage(String)"
+            },
+            "matchedColumns": [
+              12
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@run"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 36224,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user wants save a process",
+            "match": {
+              "location": "CrudProcessSteps.userWantsSaveAProcess()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 119281,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "and the user informs a process data",
+            "match": {
+              "location": "CrudProcessSteps.andTheUserInformsAProcessData(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "vara",
+                  "numero_processo",
+                  "natureza",
+                  "partes",
+                  "urgente",
+                  "arbitramento",
+                  "assistente_social",
+                  "data_entrada",
+                  "data_saida",
+                  "data_agendamento",
+                  "status",
+                  "Observacao"
+                ],
+                "line": 7
+              },
+              {
+                "cells": [
+                  "3",
+                  "4",
+                  "Guarda",
+                  "Jose X Maria",
+                  "N",
+                  "S",
+                  "Gisele",
+                  "20/10/2020",
+                  "20/10/2020",
+                  "",
+                  "Aguardando",
+                  ""
+                ],
+                "line": 8
+              }
+            ],
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 24425,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario(Scenario)"
+            }
+          }
+        ],
+        "line": 39,
+        "name": "Edit process info - PUT",
+        "description": "",
+        "id": "crud-process;edit-process-info---put;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 13550,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11772696,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "user wants edit a process",
+            "match": {
+              "location": "CrudProcessSteps.userWantsEditAProcessWithID()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 105574,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "user informs \"vara\" equals to \"10\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "vara",
+                  "offset": 14
+                },
+                {
+                  "val": "10",
+                  "offset": 31
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 76642,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "user informs \"numero_processo\" equals to \"422\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "numero_processo",
+                  "offset": 14
+                },
+                {
+                  "val": "422",
+                  "offset": 42
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 64779,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "user informs \"natureza\" equals to \"Guarda2\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "natureza",
+                  "offset": 14
+                },
+                {
+                  "val": "Guarda2",
+                  "offset": 35
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1979907,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "user informs \"partes\" equals to \"JOao X Maria\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "partes",
+                  "offset": 14
+                },
+                {
+                  "val": "JOao X Maria",
+                  "offset": 33
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 92042,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "user informs \"urgente\" equals to \"S\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "urgente",
+                  "offset": 14
+                },
+                {
+                  "val": "S",
+                  "offset": 34
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              4
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 72941,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "user informs \"arbitramento\" equals to \"N\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arbitramento",
+                  "offset": 14
+                },
+                {
+                  "val": "N",
+                  "offset": 39
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              5
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 60139,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "user informs \"assistente_social\" equals to \"Gisele da Silva\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "assistente_social",
+                  "offset": 14
+                },
+                {
+                  "val": "Gisele da Silva",
+                  "offset": 44
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              6
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 63148,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "user informs \"data_entrada\" equals to \"20/10/2022\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "data_entrada",
+                  "offset": 14
+                },
+                {
+                  "val": "20/10/2022",
+                  "offset": 39
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              7
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 59316,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "user informs \"data_saida\" equals to \"20/10/2021\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "data_saida",
+                  "offset": 14
+                },
+                {
+                  "val": "20/10/2021",
+                  "offset": 37
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              8
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 59432,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "user informs \"data_agendamento\" equals to \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "data_agendamento",
+                  "offset": 14
+                },
+                {
+                  "val": "",
+                  "offset": 43
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              9
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 55295,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "user informs \"status\" equals to \"Aguardando\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "status",
+                  "offset": 14
+                },
+                {
+                  "val": "Aguardando",
+                  "offset": 33
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              10
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 48773,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "user informs \"observacao\" equals to \"Vai ser incrivel\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "observacao",
+                  "offset": 14
+                },
+                {
+                  "val": "Vai ser incrivel",
+                  "offset": 37
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              11
+            ],
+            "keyword": "And "
+          },
+          {
+            "output": [
+              "METHOD: [ PUT (Request) ]",
+              "Endpoint: [ https://agapito-server.herokuapp.com/processos/3911.json ]",
+              "Headers: [ Accept\u003dapplication/json, application/javascript, text/javascript\nContent-Type\u003dapplication/json; charset\u003dUTF-8 ]",
+              "Body - Request: [ {Observacao\u003d, arbitramento\u003dN, assistente_social\u003dGisele da Silva, data_agendamento\u003d, data_entrada\u003d20/10/2022, data_saida\u003d20/10/2021, natureza\u003dGuarda2, numero_processo\u003d422, observacao\u003dVai ser incrivel, partes\u003dJOao X Maria, status\u003dAguardando, urgente\u003dS, vara\u003d10} ]",
+              "------------------------------------",
+              "METHOD: [ PUT (Response) ]",
+              "Status Code: [ 200 ]",
+              "Response: [ {\"id\":3911,\"vara\":\"10\",\"numero_processo\":\"422\",\"natureza\":\"Guarda2\",\"partes\":\"JOao X Maria\",\"urgente\":\"S\",\"arbitramento\":\"N\",\"assistente_social\":\"Gisele da Silva\",\"data_entrada\":\"2022-10-20\",\"data_saida\":\"2021-10-20\",\"data_agendamento\":null,\"status\":\"Aguardando\",\"observacao\":\"Vai ser incrivel\",\"created_at\":\"2020-12-21T02:07:08.249Z\",\"updated_at\":\"2020-12-21T02:07:10.748Z\",\"url\":\"https://agapito-server.herokuapp.com/processos/3911.json\"} ]",
+              ""
+            ],
+            "result": {
+              "duration": 764509082,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "user clicks on edit button",
+            "match": {
+              "location": "CrudProcessSteps.userClicksOnEditButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 122461,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "user should see \"Processo editado com sucesso\" message",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Processo editado com sucesso",
+                  "offset": 17
+                }
+              ],
+              "location": "CrudProcessSteps.userShouldSeeMessage(String)"
+            },
+            "matchedColumns": [
+              12
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@run"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 30602,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user wants save a process",
+            "match": {
+              "location": "CrudProcessSteps.userWantsSaveAProcess()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 202673,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "and the user informs a process data",
+            "match": {
+              "location": "CrudProcessSteps.andTheUserInformsAProcessData(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "vara",
+                  "numero_processo",
+                  "natureza",
+                  "partes",
+                  "urgente",
+                  "arbitramento",
+                  "assistente_social",
+                  "data_entrada",
+                  "data_saida",
+                  "data_agendamento",
+                  "status",
+                  "Observacao"
+                ],
+                "line": 7
+              },
+              {
+                "cells": [
+                  "3",
+                  "4",
+                  "Guarda",
+                  "Jose X Maria",
+                  "N",
+                  "S",
+                  "Gisele",
+                  "20/10/2020",
+                  "20/10/2020",
+                  "",
+                  "Aguardando",
+                  ""
+                ],
+                "line": 8
+              }
+            ],
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 37363,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario(Scenario)"
+            }
+          }
+        ],
+        "line": 40,
+        "name": "Edit process info - PUT",
+        "description": "",
+        "id": "crud-process;edit-process-info---put;;4",
+        "after": [
+          {
+            "result": {
+              "duration": 7730,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 21913990,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "user wants edit a process",
+            "match": {
+              "location": "CrudProcessSteps.userWantsEditAProcessWithID()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 54405,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "user informs \"vara\" equals to \"10\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "vara",
+                  "offset": 14
+                },
+                {
+                  "val": "10",
+                  "offset": 31
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 39033,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "user informs \"numero_processo\" equals to \"422\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "numero_processo",
+                  "offset": 14
+                },
+                {
+                  "val": "422",
+                  "offset": 42
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 39296,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "user informs \"natureza\" equals to \"Guarda2\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "natureza",
+                  "offset": 14
+                },
+                {
+                  "val": "Guarda2",
+                  "offset": 35
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 48958,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "user informs \"partes\" equals to \"Fulatinha\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "partes",
+                  "offset": 14
+                },
+                {
+                  "val": "Fulatinha",
+                  "offset": 33
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 49661,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "user informs \"urgente\" equals to \"S\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "urgente",
+                  "offset": 14
+                },
+                {
+                  "val": "S",
+                  "offset": 34
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              4
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 35747,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "user informs \"arbitramento\" equals to \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arbitramento",
+                  "offset": 14
+                },
+                {
+                  "val": "",
+                  "offset": 39
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              5
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 36109,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "user informs \"assistente_social\" equals to \"Gisele da Silva\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "assistente_social",
+                  "offset": 14
+                },
+                {
+                  "val": "Gisele da Silva",
+                  "offset": 44
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              6
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 36342,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "user informs \"data_entrada\" equals to \"20/10/2022\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "data_entrada",
+                  "offset": 14
+                },
+                {
+                  "val": "20/10/2022",
+                  "offset": 39
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              7
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 39617,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "user informs \"data_saida\" equals to \"20/10/2021\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "data_saida",
+                  "offset": 14
+                },
+                {
+                  "val": "20/10/2021",
+                  "offset": 37
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              8
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 37421,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "user informs \"data_agendamento\" equals to \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "data_agendamento",
+                  "offset": 14
+                },
+                {
+                  "val": "",
+                  "offset": 43
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              9
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 43823,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "user informs \"status\" equals to \"Aguardando\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "status",
+                  "offset": 14
+                },
+                {
+                  "val": "Aguardando",
+                  "offset": 33
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              10
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 39834,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "user informs \"observacao\" equals to \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "observacao",
+                  "offset": 14
+                },
+                {
+                  "val": "",
+                  "offset": 37
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              11
+            ],
+            "keyword": "And "
+          },
+          {
+            "output": [
+              "METHOD: [ PUT (Request) ]",
+              "Endpoint: [ https://agapito-server.herokuapp.com/processos/3911.json ]",
+              "Headers: [ Accept\u003dapplication/json, application/javascript, text/javascript\nContent-Type\u003dapplication/json; charset\u003dUTF-8 ]",
+              "Body - Request: [ {Observacao\u003d, arbitramento\u003d, assistente_social\u003dGisele da Silva, data_agendamento\u003d, data_entrada\u003d20/10/2022, data_saida\u003d20/10/2021, natureza\u003dGuarda2, numero_processo\u003d422, observacao\u003d, partes\u003dFulatinha, status\u003dAguardando, urgente\u003dS, vara\u003d10} ]",
+              "------------------------------------",
+              "METHOD: [ PUT (Response) ]",
+              "Status Code: [ 422 ]",
+              "Response: [ {\"arbitramento\":[\"não pode ser deixado em branco\",\"Somente permitido com as opções [S]im ou [N]ão.\"]} ]",
+              ""
+            ],
+            "result": {
+              "duration": 725476458,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "user clicks on edit button",
+            "match": {
+              "location": "CrudProcessSteps.userClicksOnEditButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 63243,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "user should see \"Erro ao editar processo\" message",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Erro ao editar processo",
+                  "offset": 17
+                }
+              ],
+              "location": "CrudProcessSteps.userShouldSeeMessage(String)"
+            },
+            "matchedColumns": [
+              12
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@run"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 15373,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user wants save a process",
+            "match": {
+              "location": "CrudProcessSteps.userWantsSaveAProcess()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 67916,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "and the user informs a process data",
+            "match": {
+              "location": "CrudProcessSteps.andTheUserInformsAProcessData(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "vara",
+                  "numero_processo",
+                  "natureza",
+                  "partes",
+                  "urgente",
+                  "arbitramento",
+                  "assistente_social",
+                  "data_entrada",
+                  "data_saida",
+                  "data_agendamento",
+                  "status",
+                  "Observacao"
+                ],
+                "line": 7
+              },
+              {
+                "cells": [
+                  "3",
+                  "4",
+                  "Guarda",
+                  "Jose X Maria",
+                  "N",
+                  "S",
+                  "Gisele",
+                  "20/10/2020",
+                  "20/10/2020",
+                  "",
+                  "Aguardando",
+                  ""
+                ],
+                "line": 8
+              }
+            ],
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 12498,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario(Scenario)"
+            }
+          }
+        ],
+        "line": 41,
+        "name": "Edit process info - PUT",
+        "description": "",
+        "id": "crud-process;edit-process-info---put;;5",
+        "after": [
+          {
+            "result": {
+              "duration": 14153,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 5742586,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "user wants edit a process",
+            "match": {
+              "location": "CrudProcessSteps.userWantsEditAProcessWithID()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 55219,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "user informs \"vara\" equals to \"1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "vara",
+                  "offset": 14
+                },
+                {
+                  "val": "1",
+                  "offset": 31
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 53892,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "user informs \"numero_processo\" equals to \"1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "numero_processo",
+                  "offset": 14
+                },
+                {
+                  "val": "1",
+                  "offset": 42
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 34225,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "user informs \"natureza\" equals to \"Auditoria\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "natureza",
+                  "offset": 14
+                },
+                {
+                  "val": "Auditoria",
+                  "offset": 35
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 32156,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "user informs \"partes\" equals to \"Empresa X Empresa\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "partes",
+                  "offset": 14
+                },
+                {
+                  "val": "Empresa X Empresa",
+                  "offset": 33
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 35028,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "user informs \"urgente\" equals to \"N\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "urgente",
+                  "offset": 14
+                },
+                {
+                  "val": "N",
+                  "offset": 34
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              4
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 31580,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "user informs \"arbitramento\" equals to \"N\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "arbitramento",
+                  "offset": 14
+                },
+                {
+                  "val": "N",
+                  "offset": 39
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              5
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 32556,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "user informs \"assistente_social\" equals to \"Clayton das couves\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "assistente_social",
+                  "offset": 14
+                },
+                {
+                  "val": "Clayton das couves",
+                  "offset": 44
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              6
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 34615,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "user informs \"data_entrada\" equals to \"01/02/2018\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "data_entrada",
+                  "offset": 14
+                },
+                {
+                  "val": "01/02/2018",
+                  "offset": 39
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              7
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 32545,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "user informs \"data_saida\" equals to \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "data_saida",
+                  "offset": 14
+                },
+                {
+                  "val": "",
+                  "offset": 37
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              8
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 39130,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "user informs \"data_agendamento\" equals to \"01/02/2023\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "data_agendamento",
+                  "offset": 14
+                },
+                {
+                  "val": "01/02/2023",
+                  "offset": 43
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              9
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 34544,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "user informs \"status\" equals to \"Em Analise\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "status",
+                  "offset": 14
+                },
+                {
+                  "val": "Em Analise",
+                  "offset": 33
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              10
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 33401,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "user informs \"observacao\" equals to \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "observacao",
+                  "offset": 14
+                },
+                {
+                  "val": "",
+                  "offset": 37
+                }
+              ],
+              "location": "CrudProcessSteps.userInformsEqualsTo(String,String)"
+            },
+            "matchedColumns": [
+              11
+            ],
+            "keyword": "And "
+          },
+          {
+            "output": [
+              "METHOD: [ PUT (Request) ]",
+              "Endpoint: [ https://agapito-server.herokuapp.com/processos/3911.json ]",
+              "Headers: [ Accept\u003dapplication/json, application/javascript, text/javascript\nContent-Type\u003dapplication/json; charset\u003dUTF-8 ]",
+              "Body - Request: [ {Observacao\u003d, arbitramento\u003dN, assistente_social\u003dClayton das couves, data_agendamento\u003d01/02/2023, data_entrada\u003d01/02/2018, data_saida\u003d, natureza\u003dAuditoria, numero_processo\u003d1, observacao\u003d, partes\u003dEmpresa X Empresa, status\u003dEm Analise, urgente\u003dN, vara\u003d1} ]",
+              "------------------------------------",
+              "METHOD: [ PUT (Response) ]",
+              "Status Code: [ 200 ]",
+              "Response: [ {\"id\":3911,\"vara\":\"1\",\"numero_processo\":\"1\",\"natureza\":\"Auditoria\",\"partes\":\"Empresa X Empresa\",\"urgente\":\"N\",\"arbitramento\":\"N\",\"assistente_social\":\"Clayton das couves\",\"data_entrada\":\"2018-02-01\",\"data_saida\":null,\"data_agendamento\":\"2023-02-01\",\"status\":\"Em Analise\",\"observacao\":\"\",\"created_at\":\"2020-12-21T02:07:08.249Z\",\"updated_at\":\"2020-12-21T02:07:12.271Z\",\"url\":\"https://agapito-server.herokuapp.com/processos/3911.json\"} ]",
+              ""
+            ],
+            "result": {
+              "duration": 760973182,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "user clicks on edit button",
+            "match": {
+              "location": "CrudProcessSteps.userClicksOnEditButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 129809,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "user should see \"Processo editado com sucesso\" message",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Processo editado com sucesso",
+                  "offset": 17
+                }
+              ],
+              "location": "CrudProcessSteps.userShouldSeeMessage(String)"
+            },
+            "matchedColumns": [
+              12
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@run"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 24658,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user wants save a process",
+            "match": {
+              "location": "CrudProcessSteps.userWantsSaveAProcess()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 108084,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "and the user informs a process data",
+            "match": {
+              "location": "CrudProcessSteps.andTheUserInformsAProcessData(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "vara",
+                  "numero_processo",
+                  "natureza",
+                  "partes",
+                  "urgente",
+                  "arbitramento",
+                  "assistente_social",
+                  "data_entrada",
+                  "data_saida",
+                  "data_agendamento",
+                  "status",
+                  "Observacao"
+                ],
+                "line": 7
+              },
+              {
+                "cells": [
+                  "3",
+                  "4",
+                  "Guarda",
+                  "Jose X Maria",
+                  "N",
+                  "S",
+                  "Gisele",
+                  "20/10/2020",
+                  "20/10/2020",
+                  "",
+                  "Aguardando",
+                  ""
+                ],
+                "line": 8
+              }
+            ],
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 34085,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeScenario(Scenario)"
+            }
+          }
+        ],
+        "line": 44,
+        "name": "Delete process - DELETE",
+        "description": "",
+        "id": "crud-process;delete-process---delete",
+        "after": [
+          {
+            "result": {
+              "duration": 11720,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 8147052,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "user wants delete a process with ID",
+            "match": {
+              "location": "CrudProcessSteps.userWantsDeleteAProcessWithID()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "output": [
+              "METHOD: [ DELETE (Request) ]",
+              "Endpoint: [ https://agapito-server.herokuapp.com/processos/3911.json ]",
+              "Headers: [ Accept\u003dapplication/json, application/javascript, text/javascript\nContent-Type\u003dapplication/json; charset\u003dUTF-8 ]",
+              "Body - Request: [  ]",
+              "------------------------------------",
+              "METHOD: [ DELETE (Response) ]",
+              "Status Code: [ 204 ]",
+              "Response: [  ]",
+              ""
+            ],
+            "result": {
+              "duration": 694277488,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "user clicks on delete button",
+            "match": {
+              "location": "CrudProcessSteps.userClicksOnDeleteButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 113946,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "user should see \"Deletado com sucesso\" message",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Deletado com sucesso",
+                  "offset": 17
+                }
+              ],
+              "location": "CrudProcessSteps.userShouldSeeMessage(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "CRUD Process",
+    "description": "",
+    "id": "crud-process",
+    "keyword": "Feature",
+    "uri": "CRUDProcess.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@run"
+      }
+    ]
+  }
+]

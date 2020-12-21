@@ -1,0 +1,5 @@
+steps/CrudProcessSteps.class
+support/RESTSupport.class
+definition/ProcessEntity.class
+runner/RunnerTest.class
+steps/Hooks.class
